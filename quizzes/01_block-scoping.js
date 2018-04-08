@@ -25,7 +25,7 @@ function immutableReference() {
   object = {a: 'q'}
   return object
 }
-// log(immutableReference())
+ log(immutableReference())
 
 function ifBlock() {
   // what is returned?
