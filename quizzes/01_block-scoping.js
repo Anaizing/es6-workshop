@@ -39,6 +39,7 @@ function ifBlock() {
   return {x: x, y: y}
 }
  // log(ifBlock())
+ // ReferenceError let/const are blockscoped
 
 function block() {
   // what is returned?
@@ -49,6 +50,7 @@ function block() {
   return {x: x, y: y}
 }
 // log(block())
+// ReferenceError let/const are blockscoped
 
 function scoped() {
   // what is returned?
@@ -59,6 +61,7 @@ function scoped() {
   return x
 }
 // log(scoped())
+// 33
 
 function veryScoped() {
   // what is returned?
@@ -73,6 +76,7 @@ function veryScoped() {
   return x
 }
 // log(veryScoped())
+// 23
 
 function temporalDeadZone() {
   console.log(myVar)
@@ -85,6 +89,7 @@ function temporalDeadZone() {
   return {myVar: myVar, myLet: myLet, myConst: myConst}
 }
 // log(temporalDeadZone())
+// ReferenceError
 
 function semiPractical() {
   // what is returned from this function?
