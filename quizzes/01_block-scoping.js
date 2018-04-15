@@ -35,7 +35,7 @@ function ifBlock() {
   }
   return {x: x, y: y}
 }
- log(ifBlock())
+ // log(ifBlock())
 
 function block() {
   // what is returned?
