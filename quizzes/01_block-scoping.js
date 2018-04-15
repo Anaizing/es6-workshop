@@ -7,6 +7,7 @@ function basic() {
   return {x: x, y: y}
 }
 // log(basic())
+// {x: 100, y: 200}
 
 function immutable() {
   // what is returned?
@@ -25,7 +26,7 @@ function immutableReference() {
   object = {a: 'q'}
   return object
 }
- log(immutableReference())
+ // log(immutableReference())
 
 function ifBlock() {
   // what is returned?
@@ -95,6 +96,21 @@ function semiPractical() {
   return callbacks.map(callback => callback())
 }
 // log(semiPractical())
+// [undefined, undefined, undefined, undefined]
+
+function semiPracticalLet() {
+  // what is returned from this function?
+  const myThings = ['thing1', 'thing2', 'red fish', 'blue fish']
+  const callbacks = []
+  for (let i = 0; i < myThings.length; i++) {
+    callbacks.push(function thingGetter() {
+      return myThings[i]
+    })
+  }
+  return callbacks.map(callback => callback())
+}
+// log(semiPracticalLet())
+// ['thing1', 'thing2', 'red fish', 'blue fish']
 
 
 
